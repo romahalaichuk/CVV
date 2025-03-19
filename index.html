@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CV - Maliuta Viktoriia</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap"
+			rel="stylesheet" />
+
+		<style>
+			body {
+				font-family: "Open Sans", sans-serif;
+				margin: 0;
+				padding: 20px;
+				background-color: #1c1c1c;
+				background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				opacity: 0;
+				animation: fadeIn 1s ease-in forwards;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: scale(0.9);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			.container {
+				max-width: 900px;
+				width: 100%;
+				background: white;
+				padding: 30px;
+				margin: auto;
+				box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+				border-radius: 15px;
+				transform: translateY(50px);
+				opacity: 0;
+				transition: all 1s ease-out;
+			}
+			.container.visible {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			.header {
+				display: flex;
+				align-items: center;
+				border-bottom: 4px solid #0073e6;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				flex-wrap: wrap;
+			}
+			.header img {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-right: 20px;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+				transition: transform 0.3s;
+			}
+			.header img:hover {
+				transform: scale(1.05);
+			}
+			.header h1 {
+				font-family: "Dancing Script", cursive;
+				font-weight: 600;
+				color: #0073e6;
+				font-size: 30px;
+				margin: 0;
+			}
+			.header p {
+				margin: 5px 0;
+				color: #aaa;
+			}
+			.content {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				gap: 20px;
+			}
+			.left-column {
+				background: #2a2a2a;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+				color: white;
+			}
+			.right-column {
+				padding: 20px;
+				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+			}
+			h2 {
+				font-family: "Dancing Script", cursive;
+				font-weight: 400;
+				color: #0073e6;
+				border-bottom: 2px solid #0073e6;
+				padding-bottom: 5px;
+				transition: color 0.3s;
+			}
+			.section {
+				margin-bottom: 20px;
+			}
+			.section:hover h2 {
+				color: #005bb5;
+			}
+			.section p {
+				font-family: "Open Sans", sans-serif;
+				font-size: 16px;
+				color: #ddd;
+			}
+			.sectionn {
+				color: #343131;
+			}
+
+			@media (max-width: 768px) {
+				.header img {
+					width: 100px;
+					height: 100px;
+					margin-right: 10px;
+				}
+				.header h1 {
+					font-size: 24px;
+				}
+				.content {
+					grid-template-columns: 1fr;
+				}
+				.left-column,
+				.right-column {
+					padding: 15px;
+				}
+				.container {
+					padding: 20px;
+				}
+				.section h2 {
+					font-size: 20px;
+				}
+				.section p {
+					font-size: 14px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.header h1 {
+					font-size: 20px;
+				}
+				.header p {
+					font-size: 14px;
+				}
+				.content {
+					padding: 10px;
+				}
+				.left-column,
+				.right-column {
+					padding: 10px;
+				}
+				.section h2 {
+					font-size: 18px;
+				}
+				.section p {
+					font-size: 12px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<img src="IMG_20250317_114340_423.PNG" alt="Maliuta Viktoriia" />
+				<div>
+					<h1>Maliuta Viktoriia</h1>
+					<p><strong>Telefon:</strong> +48 881 533 209</p>
+					<p><strong>E-mail:</strong> viktoriamalyta22@gmail.com</p>
+					<p><strong>Wiek:</strong> 25 lat (26.06.1999)</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="left-column">
+					<div class="section">
+						<h2>Umiejętności</h2>
+						<p>
+							- Doświadczenie w organizowaniu logistyki, zarządzaniu zapasami i
+							planowaniu dostaw
+						</p>
+						<p>
+							- Praca z dokumentacją magazynową, rozliczeniami i raportowaniem
+						</p>
+						<p>
+							- Umiejętność obsługi systemów magazynowych i zarządzania stanami
+							magazynowymi
+						</p>
+						<p>
+							- Znajomość procesów związanych z transportem i magazynowaniem
+							towarów
+						</p>
+					</div>
+					<div class="section">
+						<h2>Języki</h2>
+						<p>Polski – bardzo dobry</p>
+						<p>Ukraiński – ojczysty</p>
+						<p>Rosyjski – biegły</p>
+					</div>
+					<div class="section">
+						<h2>Hobby</h2>
+						<p>
+							Gotowanie, literatura, podróże, logistyka i optymalizacja procesów
+						</p>
+					</div>
+					<div class="section">
+						<h2>Prawo Jazdy</h2>
+						<p>Kategoria B</p>
+					</div>
+				</div>
+				<div class="right-column">
+					<div class="sectionn">
+						<h2>O Mnie</h2>
+						<p>
+							Jestem osobą zorganizowaną, odpowiedzialną i zmotywowaną do pracy.
+							Mam doświadczenie w pracy w różnych branżach, szczególnie w
+							logistyce i organizowaniu procesów magazynowych. Dobrze radzę
+							sobie w pracy pod presją czasu, potrafię efektywnie zarządzać
+							towarami oraz dbać o płynność procesów. Jestem gotowa do podjęcia
+							wyzwań związanych z pracą w dynamicznym środowisku magazynowym.
+							Moje umiejętności analityczne oraz doświadczenie w obsłudze
+							dokumentacji pozwalają mi skutecznie wspierać dział logistyki i
+							magazynowania.
+						</p>
+					</div>
+					<div class="sectionn">
+						<h2>Doświadczenie Zawodowe</h2>
+						<p>
+							<strong
+								>Polflam Sp. z o.o., Polska (Marzec 2022 – Wrzesień
+								2022)</strong
+							>
+							– Współpraca przy organizowaniu dostaw i zarządzaniu zapasami
+						</p>
+						<p>
+							<strong
+								>Empik Sochaczew, Polska (Wrzesień 2022 – Kwiecień 2023)</strong
+							>
+							– Praca przy organizacji przestrzeni magazynowej i logistyce
+							dostaw
+						</p>
+						<p>
+							<strong
+								>So Easy System Sp. z o.o., Polska (Kwiecień 2023 – Styczeń
+								2024)</strong
+							>
+							– Obsługa procesów logistycznych i współpraca z firmami
+							transportowymi
+						</p>
+						<p>
+							<strong
+								>Agencja Fast Service, Mars Błonie Polska (Styczeń 2024)</strong
+							>
+							– Wsparcie w zarządzaniu zapasami i organizowanie logistyki
+						</p>
+					</div>
+					<div class="sectionn">
+						<h2>Wykształcenie</h2>
+						<p>- Medyczny Koledż w mieście Pohrebyszcze (2014–2019)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelector(".container").classList.add("visible");
+			});
+		</script>
+	</body>
+</html>
