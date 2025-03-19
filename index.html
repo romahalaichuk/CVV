@@ -14,27 +14,25 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
 			rel="stylesheet" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
 			rel="stylesheet" />
-
 		<style>
 			body {
 				font-family: "Open Sans", sans-serif;
 				margin: 0;
-				padding: 20px;
-				background-color: #1c1c1c;
-				background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+				padding: 0;
+				background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				min-height: 100vh;
 				opacity: 0;
-				animation: fadeIn 1s ease-in forwards;
+				animation: fadeIn 1.5s ease-in-out forwards;
 			}
 			@keyframes fadeIn {
 				from {
 					opacity: 0;
-					transform: scale(0.9);
+					transform: scale(0.95);
 				}
 				to {
 					opacity: 1;
@@ -42,16 +40,15 @@
 				}
 			}
 			.container {
-				max-width: 900px;
-				width: 100%;
-				background: white;
-				padding: 30px;
+				width: 95%;
+				max-width: 1300px;
+				background: #1f1f1f;
+				padding: 50px;
 				margin: auto;
-				box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-				border-radius: 15px;
-				transform: translateY(50px);
-				opacity: 0;
-				transition: all 1s ease-out;
+				box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3);
+				border-radius: 20px;
+				transform: translateY(40px);
+				transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 			}
 			.container.visible {
 				transform: translateY(0);
@@ -60,119 +57,145 @@
 			.header {
 				display: flex;
 				align-items: center;
-				border-bottom: 4px solid #0073e6;
-				padding-bottom: 20px;
-				margin-bottom: 20px;
+				border-bottom: 4px solid #0066cc;
+				padding-bottom: 25px;
+				margin-bottom: 30px;
 				flex-wrap: wrap;
 			}
 			.header img {
-				width: 120px;
-				height: 120px;
-				border-radius: 50%;
+				width: 200px;
+				height: 350px;
 				object-fit: cover;
-				margin-right: 20px;
-				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-				transition: transform 0.3s;
+				margin-right: 30px;
+				box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+				transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 			}
+
 			.header img:hover {
-				transform: scale(1.05);
+				transform: scale(1.1);
+				box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
 			}
 			.header h1 {
-				font-family: "Dancing Script", cursive;
+				font-family: "Montserrat", sans-serif;
 				font-weight: 600;
-				color: #0073e6;
-				font-size: 30px;
+				color: #fff;
+				font-size: 38px;
 				margin: 0;
 			}
 			.header p {
+				color: #bbb;
+				font-size: 16px;
 				margin: 5px 0;
-				color: #aaa;
 			}
 			.content {
 				display: grid;
 				grid-template-columns: 1fr 2fr;
-				gap: 20px;
+				gap: 30px;
 			}
-			.left-column {
-				background: #2a2a2a;
-				padding: 20px;
-				border-radius: 10px;
-				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-				color: white;
-			}
+			.left-column,
 			.right-column {
-				padding: 20px;
-				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+				padding: 30px;
+				background-color: #2a2a2a;
+				box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+				border-radius: 15px;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.left-column:hover,
+			.right-column:hover {
+				transform: translateY(-10px);
+				box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
 			}
 			h2 {
-				font-family: "Dancing Script", cursive;
-				font-weight: 400;
-				color: #0073e6;
-				border-bottom: 2px solid #0073e6;
+				font-family: "Montserrat", sans-serif;
+				color: #00b5e2;
+				font-size: 24px;
+				margin-bottom: 10px;
+				border-bottom: 3px solid #00b5e2;
 				padding-bottom: 5px;
-				transition: color 0.3s;
+				transition: color 0.3s ease;
 			}
 			.section {
-				margin-bottom: 20px;
-			}
-			.section:hover h2 {
-				color: #005bb5;
+				margin-bottom: 25px;
 			}
 			.section p {
 				font-family: "Open Sans", sans-serif;
-				font-size: 16px;
-				color: #ddd;
+				font-size: 17px;
+				color: #ccc;
+				transition: color 0.3s ease, transform 0.3s ease;
+			}
+			.section p:hover {
+				color: #fff;
+				transform: translateY(-5px);
 			}
 			.sectionn {
-				color: #343131;
+				color: #ddd;
+			}
+			.section:hover h2 {
+				color: #0066cc;
+			}
+
+			.section p,
+			.sectionn p {
+				transition: transform 0.3s ease, color 0.3s ease;
+			}
+			.section p:hover,
+			.sectionn p:hover {
+				transform: translateY(-5px);
+				color: #fff;
+			}
+
+			/* Added styling for skills section */
+			.skills ul {
+				list-style-type: none;
+				padding-left: 0;
+			}
+			.skills li {
+				font-family: "Open Sans", sans-serif;
+				font-size: 16px;
+				color: #ccc;
+				margin-bottom: 10px;
+			}
+			.skills li:before {
+				content: "• ";
+				color: #00b5e2;
 			}
 
 			@media (max-width: 768px) {
 				.header img {
-					width: 100px;
-					height: 100px;
-					margin-right: 10px;
+					width: 150px;
+					height: 150px;
 				}
 				.header h1 {
-					font-size: 24px;
+					font-size: 30px;
 				}
 				.content {
 					grid-template-columns: 1fr;
 				}
 				.left-column,
 				.right-column {
-					padding: 15px;
-				}
-				.container {
 					padding: 20px;
-				}
-				.section h2 {
-					font-size: 20px;
-				}
-				.section p {
-					font-size: 14px;
 				}
 			}
 
 			@media (max-width: 480px) {
 				.header h1 {
-					font-size: 20px;
+					font-size: 24px;
 				}
 				.header p {
 					font-size: 14px;
 				}
 				.content {
-					padding: 10px;
+					padding: 15px;
 				}
 				.left-column,
 				.right-column {
-					padding: 10px;
+					padding: 15px;
 				}
 				.section h2 {
-					font-size: 18px;
+					font-size: 22px;
 				}
 				.section p {
-					font-size: 12px;
+					font-size: 16px;
 				}
 			}
 		</style>
@@ -185,95 +208,79 @@
 					<h1>Maliuta Viktoriia</h1>
 					<p><strong>Telefon:</strong> +48 881 533 209</p>
 					<p><strong>E-mail:</strong> viktoriamalyta22@gmail.com</p>
-					<p><strong>Wiek:</strong> 25 lat (26.06.1999)</p>
+					<p><strong>Data urodzenia:</strong> 26.06.1999</p>
 				</div>
 			</div>
 			<div class="content">
 				<div class="left-column">
 					<div class="section">
+						<h2>Wykształcenie</h2>
+						<p><strong>2014–2019:</strong> Medyczny Koledż w Pohrebyszcze</p>
+					</div>
+					<div class="section">
+						<h2>Doświadczenie Zawodowe</h2>
+						<p>
+							<strong>2020–2022:</strong> Administrator w kompleksie
+							restauracyjno-hotelowym, Ukraina
+						</p>
+						<p>
+							<strong>Marzec 2022–Wrzesień 2022:</strong> Polflam Sp. z o.o.
+						</p>
+						<p>
+							<strong>Wrzesień 2022–Kwiecień 2023:</strong> Empik Sochaczew
+							(Pracownik agencji Progres)
+						</p>
+						<p>
+							<strong>Kwiecień 2023–Styczeń 2024:</strong> So Easy System Sp. z
+							o.o., agencja Fast Service
+						</p>
+						<p>
+							<strong>Styczeń 2024:</strong> Agencja Fast Service, Mars Błonie
+							Polska
+						</p>
+					</div>
+					<div class="section">
 						<h2>Umiejętności</h2>
+						<p>- Obsługa dokumentacji i systemów magazynowych</p>
+						<p>- Zarządzanie przepływem towarów i kontrola jakości</p>
 						<p>
-							- Doświadczenie w organizowaniu logistyki, zarządzaniu zapasami i
-							planowaniu dostaw
+							- Biegła znajomość języka polskiego, ukraińskiego i rosyjskiego
 						</p>
-						<p>
-							- Praca z dokumentacją magazynową, rozliczeniami i raportowaniem
-						</p>
-						<p>
-							- Umiejętność obsługi systemów magazynowych i zarządzania stanami
-							magazynowymi
-						</p>
-						<p>
-							- Znajomość procesów związanych z transportem i magazynowaniem
-							towarów
-						</p>
-					</div>
-					<div class="section">
-						<h2>Języki</h2>
-						<p>Polski – bardzo dobry</p>
-						<p>Ukraiński – ojczysty</p>
-						<p>Rosyjski – biegły</p>
-					</div>
-					<div class="section">
-						<h2>Hobby</h2>
-						<p>
-							Gotowanie, literatura, podróże, logistyka i optymalizacja procesów
-						</p>
-					</div>
-					<div class="section">
-						<h2>Prawo Jazdy</h2>
-						<p>Kategoria B</p>
 					</div>
 				</div>
 				<div class="right-column">
 					<div class="sectionn">
 						<h2>O Mnie</h2>
 						<p>
-							Jestem osobą zorganizowaną, odpowiedzialną i zmotywowaną do pracy.
-							Mam doświadczenie w pracy w różnych branżach, szczególnie w
-							logistyce i organizowaniu procesów magazynowych. Dobrze radzę
-							sobie w pracy pod presją czasu, potrafię efektywnie zarządzać
-							towarami oraz dbać o płynność procesów. Jestem gotowa do podjęcia
-							wyzwań związanych z pracą w dynamicznym środowisku magazynowym.
-							Moje umiejętności analityczne oraz doświadczenie w obsłudze
-							dokumentacji pozwalają mi skutecznie wspierać dział logistyki i
-							magazynowania.
+							Jestem osobą odpowiedzialną, zorganizowaną i zdeterminowaną do
+							osiągania celów. Moje doświadczenie w różnych branżach, w tym
+							logistyce, administracji i pracy w międzynarodowym środowisku,
+							pozwoliło mi rozwijać umiejętności zarządzania czasem oraz
+							analizowania i rozwiązywania problemów. Szukam możliwości pracy w
+							dynamicznej organizacji, gdzie mogę wykorzystać swoje umiejętności
+							organizacyjne i logistyczne.
 						</p>
 					</div>
-					<div class="sectionn">
-						<h2>Doświadczenie Zawodowe</h2>
-						<p>
-							<strong
-								>Polflam Sp. z o.o., Polska (Marzec 2022 – Wrzesień
-								2022)</strong
-							>
-							– Współpraca przy organizowaniu dostaw i zarządzaniu zapasami
-						</p>
-						<p>
-							<strong
-								>Empik Sochaczew, Polska (Wrzesień 2022 – Kwiecień 2023)</strong
-							>
-							– Praca przy organizacji przestrzeni magazynowej i logistyce
-							dostaw
-						</p>
-						<p>
-							<strong
-								>So Easy System Sp. z o.o., Polska (Kwiecień 2023 – Styczeń
-								2024)</strong
-							>
-							– Obsługa procesów logistycznych i współpraca z firmami
-							transportowymi
-						</p>
-						<p>
-							<strong
-								>Agencja Fast Service, Mars Błonie Polska (Styczeń 2024)</strong
-							>
-							– Wsparcie w zarządzaniu zapasami i organizowanie logistyki
-						</p>
-					</div>
-					<div class="sectionn">
-						<h2>Wykształcenie</h2>
-						<p>- Medyczny Koledż w mieście Pohrebyszcze (2014–2019)</p>
+
+					<div class="skills sectionn">
+						<h2>Umiejętności Techniczne</h2>
+						<ul>
+							<li>
+								Znajomość podstawowych funkcji komputerów i systemów
+								operacyjnych (Windows, macOS)
+							</li>
+							<li>
+								Umiejętność korzystania z poczty e-mail i narzędzi do
+								komunikacji
+							</li>
+							<li>
+								Podstawowa obsługa internetu, wyszukiwanie informacji w sieci
+							</li>
+							<li>
+								Znajomość podstawowych aplikacji do tworzenia dokumentów i
+								prezentacji
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
